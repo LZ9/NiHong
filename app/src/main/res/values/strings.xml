@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">NiHon</string>
+    <string name="app_name">霓虹精</string>
+
+    <string name="main_hiragana_fifty_sound">平假名五十音</string>
+    <string name="main_hiragana_vocal">平假名浊音</string>
+    <string name="main_hiragana_twisted_sound">平假名拗音</string>
+
+    <string name="main_katakana_fifty_sound">片假名五十音</string>
+    <string name="main_katakana_vocal">片假名浊音</string>
+    <string name="main_katakana_twisted_sound">片假名拗音</string>
+
+    <string name="main_hiragana_katakana_fifty_sound">平假名、片假名五十音</string>
+    <string name="main_hiragana_katakana_vocal">平假名、片假名浊音</string>
+    <string name="main_hiragana_katakana_twisted_sound">平假名、片假名拗音</string>
+
+    <string name="main_all">全混合</string>
+
 </resources>

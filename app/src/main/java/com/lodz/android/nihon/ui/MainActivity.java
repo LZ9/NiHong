@@ -1,11 +1,50 @@
 package com.lodz.android.nihon.ui;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import com.lodz.android.component.base.BaseActivity;
+import com.lodz.android.component.widget.base.TitleBarLayout;
+import com.lodz.android.core.utils.ToastUtils;
 import com.lodz.android.nihon.R;
 
+import butterknife.BindView;
+import butterknife.ButterKnife;
+
 public class MainActivity extends BaseActivity {
+
+    /** 平假名五十音 */
+    @BindView(R.id.main_hiragana_fifty_sound)
+    Button mHiraganaFiftySoundButton;
+    /** 平假名浊音 */
+    @BindView(R.id.main_hiragana_vocal)
+    Button mHiraganaVocalButton;
+    /** 平假名拗音 */
+    @BindView(R.id.main_hiragana_twisted_sound)
+    Button mHiraganaTwistedSoundButton;
+    /** 片假名五十音 */
+    @BindView(R.id.main_katakana_fifty_sound)
+    Button mKatakanaFiftySoundButton;
+    /** 片假名浊音 */
+    @BindView(R.id.main_katakana_vocal)
+    Button mKatakanaVocalButton;
+    /** 片假名拗音 */
+    @BindView(R.id.main_katakana_twisted_sound)
+    Button mKatakanaTwistedSoundButton;
+    /** 平假名、片假名五十音 */
+    @BindView(R.id.main_hiragana_katakana_fifty_sound)
+    Button mHiraganaKatakanaFiftySoundButton;
+    /** 平假名、片假名浊音 */
+    @BindView(R.id.main_hiragana_katakana_vocal)
+    Button mHiraganaKatakanaVocalButton;
+    /** 平假名、片假名拗音 */
+    @BindView(R.id.main_hiragana_katakana_twisted_sound)
+    Button mHiraganaKatakanaTwistedSoundButton;
+    /** 全混合 */
+    @BindView(R.id.main_all)
+    Button mAllButton;
+
 
     @Override
     protected int getLayoutId() {
@@ -14,6 +53,93 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void findViews(Bundle savedInstanceState) {
+        ButterKnife.bind(this);
+    }
 
+    @Override
+    protected void setListeners() {
+        super.setListeners();
+        mHiraganaFiftySoundButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort(getContext(), "开发中");
+            }
+        });
+
+        mHiraganaVocalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort(getContext(), "开发中");
+            }
+        });
+
+        mHiraganaTwistedSoundButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort(getContext(), "开发中");
+            }
+        });
+
+        mKatakanaFiftySoundButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort(getContext(), "开发中");
+            }
+        });
+
+        mKatakanaVocalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort(getContext(), "开发中");
+            }
+        });
+
+        mKatakanaTwistedSoundButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort(getContext(), "开发中");
+            }
+        });
+
+        mHiraganaKatakanaFiftySoundButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort(getContext(), "开发中");
+            }
+        });
+
+        mHiraganaKatakanaVocalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort(getContext(), "开发中");
+            }
+        });
+
+        mHiraganaKatakanaTwistedSoundButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort(getContext(), "开发中");
+            }
+        });
+
+        mAllButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ToastUtils.showShort(getContext(), "开发中");
+            }
+        });
+    }
+
+    @Override
+    protected void initData() {
+        super.initData();
+        initTitleBar(getTitleBarLayout());
+        showStatusCompleted();
+    }
+
+    private void initTitleBar(TitleBarLayout titleBarLayout) {
+        titleBarLayout.needBackButton(false);
+        titleBarLayout.setTitleName(R.string.app_name);
+        titleBarLayout.setTitleBackgroundColor(R.color.colorAccent);
     }
 }
