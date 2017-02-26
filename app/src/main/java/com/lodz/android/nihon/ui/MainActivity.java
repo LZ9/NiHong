@@ -8,10 +8,15 @@ import com.lodz.android.component.base.BaseActivity;
 import com.lodz.android.component.widget.base.TitleBarLayout;
 import com.lodz.android.core.utils.ToastUtils;
 import com.lodz.android.nihon.R;
+import com.lodz.android.nihon.utils.DataUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
+/**
+ * 主界面
+ * Created by zhouL on 2017/2/25.
+ */
 public class MainActivity extends BaseActivity {
 
     /** 平假名五十音 */
@@ -23,6 +28,7 @@ public class MainActivity extends BaseActivity {
     /** 平假名拗音 */
     @BindView(R.id.main_hiragana_twisted_sound)
     Button mHiraganaTwistedSoundButton;
+
     /** 片假名五十音 */
     @BindView(R.id.main_katakana_fifty_sound)
     Button mKatakanaFiftySoundButton;
@@ -32,6 +38,7 @@ public class MainActivity extends BaseActivity {
     /** 片假名拗音 */
     @BindView(R.id.main_katakana_twisted_sound)
     Button mKatakanaTwistedSoundButton;
+
     /** 平假名、片假名五十音 */
     @BindView(R.id.main_hiragana_katakana_fifty_sound)
     Button mHiraganaKatakanaFiftySoundButton;
@@ -41,6 +48,7 @@ public class MainActivity extends BaseActivity {
     /** 平假名、片假名拗音 */
     @BindView(R.id.main_hiragana_katakana_twisted_sound)
     Button mHiraganaKatakanaTwistedSoundButton;
+
     /** 全混合 */
     @BindView(R.id.main_all)
     Button mAllButton;
@@ -62,7 +70,7 @@ public class MainActivity extends BaseActivity {
         mHiraganaFiftySoundButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastUtils.showShort(getContext(), "开发中");
+                StudyActivity.start(getContext(), StudyActivity.SoundType.HIRAGANA_FIFTY_SOUND_TYPE, DataUtils.getFiftySoundList());
             }
         });
 
@@ -142,4 +150,6 @@ public class MainActivity extends BaseActivity {
         titleBarLayout.setTitleName(R.string.app_name);
         titleBarLayout.setTitleBackgroundColor(R.color.colorAccent);
     }
+
+
 }

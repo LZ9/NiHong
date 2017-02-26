@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/pronunciation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/main_text"
+        android:layout_centerHorizontal="true"
+        android:text="a"
+        android:textColor="@color/colorAccent"
+        android:textSize="40sp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/main_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="あ"
+        android:textColor="@color/black"
+        android:textSize="50sp" />
+
+    <TextView
+        android:id="@+id/other_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/main_text"
+        android:layout_centerHorizontal="true"
+        android:text="ア"
+        android:textColor="@color/color_778899"
+        android:textSize="40sp"
+        android:visibility="visible" />
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="8dp"
+        android:gravity="end"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/show_other_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="显示其他信息"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/next_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下一个"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</RelativeLayout>
