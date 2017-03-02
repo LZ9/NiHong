@@ -92,7 +92,7 @@ public class MainActivity extends BaseActivity {
         mKatakanaFiftySoundButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastUtils.showShort(getContext(), "开发中");
+                StudyActivity.start(getContext(), StudyActivity.SoundType.KATAKANA_FIFTY_SOUND_TYPE, DataUtils.getFiftySoundList());
             }
         });
 

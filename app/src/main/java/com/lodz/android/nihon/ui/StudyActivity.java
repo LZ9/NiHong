@@ -216,6 +216,9 @@ public class StudyActivity extends BaseActivity {
             case SoundType.HIRAGANA_VOCAL_TYPE:
             case SoundType.HIRAGANA_TWISTED_SOUND_TYPE:
             case SoundType.KATAKANA_FIFTY_SOUND_TYPE:
+                mMainTextView.setText(bean.katakanaText);
+                mOtherTextView.setText(bean.hiraganaText);
+                break;
             case SoundType.KATAKANA_VOCAL_TYPE:
             case SoundType.KATAKANA_TWISTED_SOUND_TYPE:
             case SoundType.HIRAGANA_KATAKANA_FIFTY_SOUND_TYPE:
