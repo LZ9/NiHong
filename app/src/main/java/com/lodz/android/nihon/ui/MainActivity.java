@@ -1,10 +1,11 @@
 package com.lodz.android.nihon.ui;
 
 import android.os.Bundle;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 
-import com.lodz.android.component.base.BaseActivity;
+import com.lodz.android.component.base.activity.BaseActivity;
 import com.lodz.android.component.widget.base.TitleBarLayout;
 import com.lodz.android.core.utils.ToastUtils;
 import com.lodz.android.nihon.R;
@@ -148,7 +149,7 @@ public class MainActivity extends BaseActivity {
     private void initTitleBar(TitleBarLayout titleBarLayout) {
         titleBarLayout.needBackButton(false);
         titleBarLayout.setTitleName(R.string.app_name);
-        titleBarLayout.setTitleBackgroundColor(R.color.colorAccent);
+        titleBarLayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.colorAccent));
     }
 
 

@@ -4,11 +4,12 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IntDef;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.lodz.android.component.base.BaseActivity;
+import com.lodz.android.component.base.activity.BaseActivity;
 import com.lodz.android.component.widget.base.TitleBarLayout;
 import com.lodz.android.nihon.R;
 import com.lodz.android.nihon.bean.SoundBean;
@@ -27,7 +28,7 @@ import butterknife.ButterKnife;
  * 学习页面
  * Created by zhouL on 2017/2/26.
  */
-public class StudyActivity extends BaseActivity{
+public class StudyActivity extends BaseActivity {
 
     @IntDef({SoundType.HIRAGANA_FIFTY_SOUND_TYPE, SoundType.HIRAGANA_VOCAL_TYPE, SoundType.HIRAGANA_TWISTED_SOUND_TYPE,
             SoundType.KATAKANA_FIFTY_SOUND_TYPE, SoundType.KATAKANA_VOCAL_TYPE, SoundType.KATAKANA_TWISTED_SOUND_TYPE,
@@ -154,7 +155,7 @@ public class StudyActivity extends BaseActivity{
 
     private void initTitleBar(TitleBarLayout titleBarLayout) {
         titleBarLayout.setTitleName(getTitleByType(mType));
-        titleBarLayout.setTitleBackgroundColor(R.color.colorAccent);
+        titleBarLayout.setBackgroundColor(ContextCompat.getColor(getContext(), R.color.colorAccent));
     }
 
     /**

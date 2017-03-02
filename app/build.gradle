@@ -19,7 +19,7 @@ android {
 }
 
 dependencies {
-    compile 'cn.lodz:Component:1.0.5'
+    compile 'cn.lodz:Component:1.1.1'
     compile 'cn.lodz:ImagerLoader:1.0.3'
 
     // butterknife
