@@ -78,7 +78,7 @@ public class MainActivity extends BaseActivity {
         mHiraganaVocalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastUtils.showShort(getContext(), "开发中");
+                StudyActivity.start(getContext(), StudyActivity.SoundType.HIRAGANA_VOCAL_TYPE, DataUtils.getVocalList());
             }
         });
 
@@ -99,7 +99,7 @@ public class MainActivity extends BaseActivity {
         mKatakanaVocalButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ToastUtils.showShort(getContext(), "开发中");
+                StudyActivity.start(getContext(), StudyActivity.SoundType.KATAKANA_VOCAL_TYPE, DataUtils.getVocalList());
             }
         });
 

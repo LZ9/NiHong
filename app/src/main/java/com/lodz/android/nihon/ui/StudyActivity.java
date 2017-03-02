@@ -210,16 +210,16 @@ public class StudyActivity extends BaseActivity {
         mPronunciationTextView.setText(bean.pronunciation);
         switch (type){
             case SoundType.HIRAGANA_FIFTY_SOUND_TYPE:
+            case SoundType.HIRAGANA_VOCAL_TYPE:
                 mMainTextView.setText(bean.hiraganaText);
                 mOtherTextView.setText(bean.katakanaText);
                 break;
-            case SoundType.HIRAGANA_VOCAL_TYPE:
             case SoundType.HIRAGANA_TWISTED_SOUND_TYPE:
             case SoundType.KATAKANA_FIFTY_SOUND_TYPE:
+            case SoundType.KATAKANA_VOCAL_TYPE:
                 mMainTextView.setText(bean.katakanaText);
                 mOtherTextView.setText(bean.hiraganaText);
                 break;
-            case SoundType.KATAKANA_VOCAL_TYPE:
             case SoundType.KATAKANA_TWISTED_SOUND_TYPE:
             case SoundType.HIRAGANA_KATAKANA_FIFTY_SOUND_TYPE:
             case SoundType.HIRAGANA_KATAKANA_VOCAL_TYPE:

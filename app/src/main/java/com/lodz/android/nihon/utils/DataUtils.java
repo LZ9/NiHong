@@ -12,7 +12,7 @@ import java.util.List;
 public class DataUtils {
 
     /** 五十音发音 */
-    private static final String[] mPronunciation = new String[]{
+    private static final String[] mPronunciationFiftySound = new String[]{
             "a", "i", "u", "e", "o",
             "ka", "ki", "ku", "ke", "ko",
             "sa", "shi", "su", "se", "so",
@@ -58,7 +58,7 @@ public class DataUtils {
         List<SoundBean> list = new ArrayList<>();
         for (int i = 0; i < mHiraganaFiftySound.length; i++) {
             SoundBean bean = new SoundBean();
-            bean.pronunciation = mPronunciation[i];
+            bean.pronunciation = mPronunciationFiftySound[i];
             bean.hiraganaText = mHiraganaFiftySound[i];
             bean.katakanaText = mKatakanaFiftySound[i];
             list.add(bean);
@@ -66,10 +66,39 @@ public class DataUtils {
         return list;
     }
 
+    /** 浊音发音 */
+    private static final String[] mPronunciationVocal = new String[]{
+            "ga", "gi", "gu", "ge", "go",
+            "za", "ji", "zu", "ze", "zo",
+            "da", "ji", "zu", "de", "do",
+            "ba", "bi", "bu", "be", "bo",
+            "pa", "pi", "pu", "pe", "po"};
+    /** 平假名浊音 */
+    private static final String[] mHiraganaVocal = new String[]{
+            "が", "ぎ", "ぐ", "げ", "ご",
+            "ざ", "じ", "ず", "ぜ", "ぞ",
+            "だ", "ぢ", "づ", "で", "ど",
+            "ば", "び", "ぶ", "べ", "ぼ",
+            "ぱ", "ぴ", "ぷ", "ぺ", "ぽ"};
+    /** 片假名浊音 */
+    private static final String[] mKatakanaVocal = new String[]{
+            "ガ", "ギ", "グ", "ゲ", "ゴ",
+            "ザ", "ジ", "ズ", "ゼ", "ゾ",
+            "ダ", "ヂ", "ヅ", "デ", "ド",
+            "バ", "ビ", "ブ", "ベ", "ボ",
+            "パ", "ピ", "プ", "ペ", "ポ"};
 
     /** 获取浊音列表 */
     public static List<SoundBean> getVocalList() {
-        return null;
+        List<SoundBean> list = new ArrayList<>();
+        for (int i = 0; i < mHiraganaVocal.length; i++) {
+            SoundBean bean = new SoundBean();
+            bean.pronunciation = mPronunciationVocal[i];
+            bean.hiraganaText = mHiraganaVocal[i];
+            bean.katakanaText = mKatakanaVocal[i];
+            list.add(bean);
+        }
+        return list;
     }
 
     /** 获取拗音列表 */
