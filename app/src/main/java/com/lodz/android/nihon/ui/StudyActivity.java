@@ -3,16 +3,17 @@ package com.lodz.android.nihon.ui;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.IntDef;
-import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.lodz.android.component.base.activity.BaseActivity;
-import com.lodz.android.component.widget.base.TitleBarLayout;
+import androidx.annotation.IntDef;
+import androidx.core.content.ContextCompat;
+
 import com.lodz.android.nihon.R;
 import com.lodz.android.nihon.bean.SoundBean;
+import com.lodz.android.pandora.base.activity.BaseActivity;
+import com.lodz.android.pandora.widget.base.TitleBarLayout;
 
 import java.io.Serializable;
 import java.lang.annotation.Retention;
@@ -190,8 +191,8 @@ public class StudyActivity extends BaseActivity {
     }
 
     @Override
-    protected void clickBackBtn() {
-        super.clickBackBtn();
+    protected void onClickBackBtn() {
+        super.onClickBackBtn();
         finish();
     }
 

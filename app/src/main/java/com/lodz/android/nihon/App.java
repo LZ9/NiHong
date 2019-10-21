@@ -1,20 +1,21 @@
 package com.lodz.android.nihon;
 
-import com.lodz.android.component.base.BaseApplication;
+
+import com.lodz.android.pandora.base.application.BaseApplication;
 
 /**
  * Application
  * Created by zhouL on 2017/2/18.
  */
-public class App extends BaseApplication{
+public class App extends BaseApplication {
 
     @Override
-    protected void afterCreate() {
+    public void onExit() {
 
     }
 
     @Override
-    protected void beforeExit() {
+    public void onStartCreate() {
 
     }
 }

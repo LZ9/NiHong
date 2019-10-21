@@ -1,15 +1,16 @@
 package com.lodz.android.nihon.ui;
 
 import android.os.Bundle;
-import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.Button;
 
-import com.lodz.android.component.base.activity.BaseActivity;
-import com.lodz.android.component.widget.base.TitleBarLayout;
-import com.lodz.android.core.utils.ToastUtils;
+import androidx.core.content.ContextCompat;
+
+import com.lodz.android.corekt.utils.ToastUtils;
 import com.lodz.android.nihon.R;
 import com.lodz.android.nihon.utils.DataUtils;
+import com.lodz.android.pandora.base.activity.BaseActivity;
+import com.lodz.android.pandora.widget.base.TitleBarLayout;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
