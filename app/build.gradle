@@ -26,8 +26,8 @@ android {
 }
 
 dependencies {
-    implementation 'com.lodz:pandora:1.1.9'
-    implementation 'com.lodz:imageloader-kt:1.1.1'
+    implementation 'com.lodz:pandora:1.2.1'
+    implementation 'com.lodz:imageloader-kt:1.1.2'
 
     // butterknife
     implementation 'com.jakewharton:butterknife:10.2.0'
