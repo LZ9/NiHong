@@ -10,6 +10,7 @@ android {
         targetSdkVersion 29
         versionCode 3
         versionName "1.0.3"
+        multiDexEnabled = true// 启用dex分包
     }
 
     compileOptions {
@@ -30,6 +31,6 @@ dependencies {
     implementation 'com.lodz:imageloader-kt:1.1.2'
 
     // butterknife
-    implementation 'com.jakewharton:butterknife:10.2.0'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+    implementation 'com.jakewharton:butterknife:10.2.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.1'
 }
